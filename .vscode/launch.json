@@ -1,0 +1,11 @@
+{
+    "version": "0.0.1",
+    "configurations": [
+        {
+        "name": "Debug App in Chrome",
+        "type": "chrome",
+        "request": "launch",
+        "url": "http://localhost:8100/",
+        "webRoot": "${workspaceFolder}/www"
+    }]
+}
