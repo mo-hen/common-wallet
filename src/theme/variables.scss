@@ -1,0 +1,94 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+@import "ionic.globals";
+@import "mixins";
+@import "overrides";
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+$colors: (
+    primary: $color-primary,
+    secondary: $color-secondary,
+    warning: #ffa500,
+    danger: #ef473a,
+    success: #01d1a2,
+    light: #f4f4f4,
+    blank: #fff,
+    dark: #424242,
+    grey: #667,
+    light-grey: #9b9bab
+);
+$toast-max-width: 200px;
+$toast-md-border-radius: 30px;
+$toast-ios-border-radius: 30px;
+$toast-md-background: rgb(0, 0, 0);
+$toast-ios-background: rgb(0, 0, 0);
+$toast-md-title-color: #fff;
+$toast-ios-title-color: #fff;
+$toast-ios-title-padding-start: 1.5rem;
+$toast-ios-title-padding-end: 1.5rem;
+$toast-ios-title-padding-top: 0.8rem;
+$toast-ios-title-padding-bottom: 0.8rem;
+$toast-ios-title-font-size: 0.8rem;
+$toast-md-title-font-size: 0.8rem;
+$item-md-divider-border-bottom: 1px solid rgba(0, 0, 0, 0);
+.toast-container {
+    // background-color: color(“primary”);
+    text-align: center;
+}
+
+// popover 样式
+$popover-ios-width: 130px;
+$popover-ios-border-radius: 0;
+$popover-ios-background: #494949;
+
+$popover-md-width: 130px;
+$popover-md-border-radius: 0;
+$popover-md-background: #494949;
+// popover 样式  结束
+
+//Button
+$button-md-text-transform: normal;
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+@import "ionic.theme.default";
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+@import "ionic.ionicons";
+// Fonts
+// --------------------------------------------------
+@import "roboto";
+@import "noto-sans";

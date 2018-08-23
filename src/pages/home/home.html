@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{ 'TrustNote' | translate }}</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="presentPopover($event)">
+                <ion-icon name="add"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-refresher snapbackDuration=200 pullMax=300 (ionRefresh)="refresh($event)">
+        <ion-refresher-content pullingIcon="arrow-down" refreshingSpinner="circles"></ion-refresher-content>
+    </ion-refresher>
+
+    <div class="banner">
+        <h1 class="amount-title">
+            {{amount}}
+            <span>MN</span>
+        </h1>
+    </div>
+
+    <div class="flex-box">
+        <div (click)="navToSend()" class="flex-item">
+            <button ion-button icon-only color="dark" block>
+                <ion-icon name="share"></ion-icon>
+            </button>
+            <p>{{ 'Transfer' | translate}}</p>
+        </div>
+        <div (click)="navToAssets()" class="flex-item">
+            <button ion-button icon-only color="dark" block>
+                <ion-icon name="card"></ion-icon>
+            </button>
+            <p>{{ 'Assets' | translate}}</p>
+        </div>
+        <div (click)="navToHistory()" class="flex-item">
+            <button ion-button icon-only color="dark" block>
+                <ion-icon name="list"></ion-icon>
+            </button>
+            <p>{{ 'History' | translate}}</p>
+        </div>
+    </div>
+
+</ion-content>

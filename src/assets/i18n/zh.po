@@ -1,0 +1,178 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh\n"
+
+msgid "Back"
+msgstr "返回"
+
+#: Tab Title
+msgid "Wallet"
+msgstr "钱包"
+
+msgid "Discover"
+msgstr "发现"
+
+msgid "Settings"
+msgstr "设置"
+
+#: Init App
+msgid "Welcome To TrustNote"
+msgstr "欢迎使用TrustNote"
+
+msgid "Enter Wallet"
+msgstr "进入钱包"
+
+msgid "Recover Wallet"
+msgstr "恢复钱包"
+
+msgid "Next"
+msgstr "下一步"
+
+#: Init App -> Create Wallet
+msgid "Create Wallet"
+msgstr "创建钱包"
+
+msgid "Create wallet"
+msgstr "创建钱包"
+
+msgid "Create"
+msgstr "创建"
+
+msgid "Backup Phrase"
+msgstr "备份助记词"
+
+msgid "Recommend backup phrase to prevent account loss or backup in settings."
+msgstr "推荐备份助记词以防止账户丢失，也可以在设置中进行备份。"
+
+msgid "Backup"
+msgstr "备份"
+
+msgid "Skip"
+msgstr "跳过"
+
+msgid "Ok"
+msgstr "确定"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "TrustNote"
+msgstr "TrustNote"
+
+#: Home Page
+msgid "Transfer"
+msgstr "转账"
+
+msgid "Assets"
+msgstr "资产"
+
+msgid "History"
+msgstr "历史"
+
+#: Home Page -> Wallet Address
+msgid "my wallet address"
+msgstr "我的钱包地址"
+
+msgid "Copied to clipboard"
+msgstr "已复制到剪贴板"
+
+#: Discover Page
+msgid "TrustNote Explorer"
+msgstr "TrustNote浏览器"
+
+msgid "iToken Platform"
+msgstr "iToken平台"
+
+#: Setting Page
+#: Setting Page -> Account
+msgid "Account"
+msgstr "账户"
+
+msgid "Wallet ID"
+msgstr "钱包ID"
+
+msgid "Set Password"
+msgstr "设置密码"
+
+msgid "Update Password"
+msgstr "更改密码"
+
+msgid "Backup Wallet"
+msgstr "备份钱包"
+
+msgid "Switch Account"
+msgstr "切换账户"
+
+msgid "The two password entries are inconsistent"
+msgstr "两次输入密码不一致"
+
+msgid "Password set success"
+msgstr "密码设置成功"
+
+msgid "Please enter password"
+msgstr "请输入密码"
+
+msgid "The input seed is invalid"
+msgstr "输入的助记词无效"
+
+msgid "Restore wallet"
+msgstr "恢复钱包"
+
+msgid "Restore"
+msgstr "恢复"
+
+msgid "Please enter password again"
+msgstr "请再一次输入密码"
+
+msgid "Close password"
+msgstr "关闭密码"
+
+msgid "wrong password"
+msgstr "密码错误"
+
+#: Setting Page -> General
+msgid "General"
+msgstr "通用"
+
+msgid "Language"
+msgstr "语言"
+
+msgid "Currency"
+msgstr "货币"
+
+msgid "CNY"
+msgstr "人民币"
+
+msgid "USD"
+msgstr "美元"
+
+#: Setting Page -> Follow Us
+msgid "Follow Us"
+msgstr "关注我们"
+
+#: Setting Page -> Support
+msgid "Support"
+msgstr "帮助"
+
+#: Setting Page -> About
+msgid "About"
+msgstr "关于"
+
+msgid "Version"
+msgstr "版本"
+
+#: Setting Page -> Terms of Use
+msgid "Terms of Use"
+msgstr "使用协议"
+
+#: Setting Page -> Privacy Policy
+msgid "Privacy Policy"
+msgstr "隐私条款"
+
+#: Home page -> More
+msgid "More"
+msgstr "点击加载更多"

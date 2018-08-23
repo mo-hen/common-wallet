@@ -1,2 +1,1 @@
-# common-wallet
-TrustNote common wallet
+### An Entrance of TrustNote BlockChain Ecosystem

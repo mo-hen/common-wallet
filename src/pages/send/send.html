@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{ 'Transfer' | translate }}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label stacked>{{ 'Payee Address' | translate}}</ion-label>
+            <ion-input [(ngModel)]="payeeAddress"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>{{ 'Payment Amount' | translate}}</ion-label>
+            <ion-input [(ngModel)]="paymentAmount"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>{{ 'Additional Message(optional)' | translate}}</ion-label>
+            <ion-input [(ngModel)]="additionalMessage"></ion-input>
+        </ion-item>
+    </ion-list>
+
+    <div padding>
+        <button ion-button block (click)="send()">{{ 'Pay' | translate}}</button>
+    </div>
+
+</ion-content>

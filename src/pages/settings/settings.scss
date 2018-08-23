@@ -1,0 +1,11 @@
+page-settings {
+    ion-content {
+        background-color: #f2f2f2 !important;
+    }
+    .item-inner {
+        border-bottom-color: #ccc !important;
+    }
+    .list-ios>.item-block:last-child {
+        border-bottom: none;
+    }
+}

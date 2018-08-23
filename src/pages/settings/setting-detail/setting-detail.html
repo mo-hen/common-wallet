@@ -1,0 +1,84 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            {{ currentTitle | translate }}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <!-- 账户 -->
+    <ion-list *ngIf="currentTitle=='ACCOUNT'">
+        <button ion-item>
+            <ion-icon name="ios-briefcase" item-start></ion-icon>
+            {{ 'Wallet ID' | translate }}
+            <ion-note *ngIf="wallet.walletId" item-end>
+                {{ wallet.walletId.substr(0,12) + '...' }}
+            </ion-note>
+        </button>
+
+        <button ion-item (click)="setPass()">
+            <ion-icon class="item-img" name="ios-lock" item-start></ion-icon>
+            <span>{{ 'Set Password' | translate }}</span>
+        </button>
+
+        <button ion-item (click)="updatePass()">
+            <ion-icon class="item-img" name="md-key" item-start></ion-icon>
+            <span>{{ 'Update Password' | translate }}</span>
+        </button>
+
+        <button ion-item (click)="backupSeed()">
+            <ion-icon name="ios-paper" item-start></ion-icon>
+            <span>{{ 'Backup Wallet' | translate }}</span>
+        </button>
+
+        <button ion-item (click)="switchWallet()">
+            <ion-icon name="ios-switch" item-start></ion-icon>
+            <span>{{ 'Switch Account' | translate}}</span>
+        </button>
+    </ion-list>
+
+    <!-- 通用 -->
+    <ion-list *ngIf="currentTitle=='GENERAL'">
+        <ion-item>
+            <ion-icon name="ios-text" class="item-img" item-start></ion-icon>
+
+            <ion-label>{{ 'Language' | translate }}</ion-label>
+
+            <ion-select #language [(ngModel)]="settings.language" (ngModelChange)="switchLanguage(language.value)">
+
+                <ion-option value="zh">中文</ion-option>
+                <ion-option value="en">English</ion-option>
+
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-icon class="item-img" name="logo-usd" item-start></ion-icon>
+            <ion-label>{{ 'Currency' | translate }}</ion-label>
+            <ion-select #money [(ngModel)]="settings.currency" (ngModelChange)="switchCurrency(money.value)">
+                <ion-option value="CNY">{{ 'CNY' | translate }}</ion-option>
+                <ion-option value="USD">{{ 'USD' | translate }}</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+
+    <!-- 关于我们 -->
+    <ion-list *ngIf="currentTitle=='ABOUT'">
+        <button ion-item>
+            <ion-icon class="item-img" name="information-circle" item-start></ion-icon>
+            <span>{{ 'Version' | translate }}</span>
+            <ion-note *ngIf="wallet.walletId" item-end>
+                {{ version }}
+            </ion-note>
+        </button>
+        <button ion-item>
+            <ion-icon name="ios-paper" class="item-img" item-start></ion-icon>
+            <span>{{ 'Terms of Use' | translate }}</span>
+        </button>
+        <button ion-item>
+            <ion-icon name="md-notifications" class="item-img" item-start></ion-icon>
+            <span>{{ 'Privacy Policy' | translate }}</span>
+        </button>
+    </ion-list>
+</ion-content>

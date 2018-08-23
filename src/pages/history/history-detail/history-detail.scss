@@ -1,0 +1,14 @@
+history-detail {
+    table {
+        width: 100%;
+        background: #f2f2f2;
+        tr:nth-child(odd) {
+            background: #ccc;
+        }
+        td:nth-child(odd) {
+            padding: 10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+}

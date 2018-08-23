@@ -1,0 +1,103 @@
+// http://ionicframework.com/docs/v2/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+html,
+body,
+.back-transparent,
+ion-app,
+.nav-decor {
+    background: transparent !important;
+}
+
+ion-header {
+    button.modal-close-button {
+        font-size: 16px;
+        font-weight: 400;
+        ion-icon {
+            font-size: 20px;
+        }
+    }
+}
+
+ion-toast.globalToastStyle {
+    .toast-wrapper {
+        width: 60%;
+        margin-bottom: 5em;
+        border-radius: 1.8em;
+        background: rgba(0, 0, 0, .8);
+    }
+    .toast-message {
+        padding: 0.9em 1.5em;
+        font-size: 1.5rem;
+    }
+    .toast-container {
+        text-align: center;
+    }
+}
+
+// alert 样式 iOS
+ion-alert.alertConfirm.alert-ios {
+    ion-backdrop{}
+    div.alert-wrapper{
+        background-color: #fff;
+        max-width: 90%;
+        width: 290px;
+
+        div.alert-head{
+            font-weight: 400;
+            color: #333;
+        }
+        div.alert-message:empty{
+            padding: 0;
+        }
+        div.alert-message{
+            padding: 0 16px 10px;
+            color: #454545;
+        }
+        div.alert-input-wrapper input.alert-input{
+            height: 35px;
+        }
+        button.alert-button{
+            font-size: 16px;
+            color: #555;
+        }
+        button.alert-button:last-child{
+            font-weight: normal;
+            color: #007BD9; //#2172C8;
+        }
+    }
+}
+// alert 样式 md
+ion-alert.alertConfirm.alert-md {
+    ion-backdrop{}
+    div.alert-wrapper{
+        box-shadow: 0 16px 20px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        max-width: 90%;
+        width: 310px;
+        bottom: 40%;
+        position: absolute;
+
+        div.alert-head{}
+        div.alert-message:empty{}
+        div.alert-message{}
+        div.alert-input-wrapper input.alert-input{}
+        button.alert-button{
+            color: #555;
+        }
+        button.alert-button:last-child{
+            color: #007BD9;
+        }
+    }
+}

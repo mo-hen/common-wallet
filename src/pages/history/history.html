@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{ 'History' | translate }}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher snapbackDuration=200 pullMax=300 (ionRefresh)="refresh($event)">
+        <ion-refresher-content pullingIcon="arrow-down" refreshingSpinner="circles"></ion-refresher-content>
+    </ion-refresher>
+    <ion-list>
+        <ion-item ion-item *ngFor="let unit of historyList">
+            <ion-avatar item-start>
+                <ion-icon name="arrow-round-back" *ngIf="unit.action == 'sent'"></ion-icon>
+                <ion-icon name="arrow-round-forward" *ngIf="unit.action == 'received'"></ion-icon>
+            </ion-avatar>
+            <h2>{{unit.amount.TTT/1000000}} {{unit.asset}}
+                <span class="unit-time">{{unit.timestamp | dateFormat}}</span>
+            </h2>
+            <p (click)="toDetail(unit)">{{unit.unit}}</p>
+        </ion-item>
+        <button (click)="loadMore()" ion-button color="dark" clear full>{{ 'More' | translate}}...</button>
+    </ion-list>
+
+</ion-content>

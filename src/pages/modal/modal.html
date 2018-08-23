@@ -1,0 +1,17 @@
+<ion-header no-shadow>
+    <ion-navbar class="page-navbar">
+        <ion-buttons>
+            <button ion-button icon-only (click)="closePage()">
+                <ion-icon name="close"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <p class="AddrP">{{'my wallet address' | translate}}</p>
+    <div class="qrCodeWrap">
+        <ngx-qrcode qrc-class="aclass" copy-to-clipboard="{{ walletAddress }}" qrc-value="{{walletAddress}}" qrc-errorCorrectionLevel="M"></ngx-qrcode>
+        <span copy-to-clipboard="{{ walletAddress }}">{{walletAddress}}</span>
+    </div>
+</ion-content>

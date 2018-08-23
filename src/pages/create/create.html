@@ -1,0 +1,11 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{ 'CREATE_WALLET' | translate }}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <p>{{mnemonic}}</p>
+    <button ion-button block (click)="onClickNext()">{{ 'NEXT' | translate }}</button>
+</ion-content>

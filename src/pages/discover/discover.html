@@ -1,0 +1,54 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>{{ 'TrustNote' | translate }}</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <ion-slides (load)="play()" class="myslides" autoplay="2000" centeredSlides="true" loop="true" pager="true" autoplayDisableOnInteration="true">
+
+        <ion-slide>
+            <div class="box banner">
+                <img src="assets/img/banner1.jpg" />
+            </div>
+        </ion-slide>
+
+        <ion-slide>
+            <div class="box banner">
+                <img src="assets/img/banner2.jpg" />
+            </div>
+        </ion-slide>
+
+        <ion-slide on-slide-changed="slideHasChanged(index)">
+            <div class="box banner">
+                <img src="assets/img/banner3.jpg" />
+            </div>
+        </ion-slide>
+
+    </ion-slides>
+
+    <h4 class="item-head">本地应用</h4>
+    <div class="links" *ngIf="applist">
+        <div class="link" *ngFor="let link of applist.official" (click)="browserShow(link.url,link.title)">
+            <img class="icon" src="{{link.img}}">
+            <p class="title">{{ link.title | translate }}</p>
+        </div>
+    </div>
+
+    <h4 class="item-head">第三方应用</h4>
+    <ion-list class="items" *ngIf="applist">
+
+        <ion-item *ngFor="let item of applist.users" (click)="browserShow(item.url,item.title)">
+            <ion-avatar item-start>
+                <img src="{{item.img}}">
+            </ion-avatar>
+            <h2>{{item.title}}</h2>
+        </ion-item>
+
+    </ion-list>
+
+</ion-content>

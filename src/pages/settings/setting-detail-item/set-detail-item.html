@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            {{ currentTitle | translate }}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list *ngIf="currentTitle=='SETPASS'">
+
+        <div *ngIf="!islock">
+            <ion-item>
+                <ion-label floating>Password</ion-label>
+                <ion-input type="password" #setPass></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating>Confirm Pass</ion-label>
+                <ion-input type="password" #setRePass></ion-input>
+            </ion-item>
+            <button class="passBtn" (click)="passwordSet(setPass.value,setRePass.value)" ion-button full>Enter</button>
+        </div>
+
+        <div *ngIf="islock">
+            <ion-item>
+                <ion-label>Unlock password</ion-label>
+                <ion-toggle [(ngModel)]="unlock" (ngModelChange)="unLock()" color="secondary"></ion-toggle>
+            </ion-item>
+        </div>
+
+    </ion-list>
+
+
+    <ion-list *ngIf="currentTitle=='UPDATEPASS'">
+
+        <ion-item>
+            <ion-label floating>Old Password</ion-label>
+            <ion-input #oldPass type="password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>New Password</ion-label>
+            <ion-input type="password" #updatePass></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Confirm Pass</ion-label>
+            <ion-input type="password" #updateRePass></ion-input>
+        </ion-item>
+
+        <button class="passBtn" [disabled]="!checkPassAble" (click)="passwordUpdate(updatePass.value,updateRePass.value,oldPass.value)"
+            ion-button full>Enter</button>
+    </ion-list>
+
+    <div *ngIf="currentTitle=='BACKUP_WALLET'">
+        <ion-card class="seed-card">
+            <p>{{wallet.mnemonic}}</p>
+        </ion-card>
+    </div>
+
+
+</ion-content>

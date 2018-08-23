@@ -1,0 +1,43 @@
+<ion-header no-shadow>
+    <ion-navbar class="page-navbar">
+        <ion-title>{{ 'TrustNote' | translate }}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+
+    <ion-list>
+
+        <ion-item-divider color="light"></ion-item-divider>
+
+        <button ion-item (click)="openPage('ACCOUNT')" icon-start>
+            <ion-icon name="md-person" [ngStyle]="{'color': green}" item-start></ion-icon>
+            {{ 'Account' | translate }}
+        </button>
+
+        <button ion-item (click)="openPage('GENERAL')" icon-start>
+            <ion-icon name="ios-build" item-start></ion-icon>
+            {{ 'General' | translate }}
+        </button>
+
+
+        <ion-item-divider color="light"></ion-item-divider>
+
+        <button ion-item icon-start>
+            <ion-icon name="ios-at" item-start></ion-icon>
+            {{ 'Follow Us' | translate }}
+        </button>
+
+        <button ion-item icon-start>
+            <ion-icon name="ios-call" item-start></ion-icon>
+            {{ 'Support' | translate }}
+        </button>
+
+        <button ion-item (click)="openPage('ABOUT')" icon-start>
+            <ion-icon name="ios-contacts" item-start></ion-icon>
+            {{ 'About' | translate }}
+        </button>
+
+    </ion-list>
+
+</ion-content>

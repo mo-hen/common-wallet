@@ -1,0 +1,20 @@
+/* Native modules */
+export { Clipboard } from "@ionic-native/clipboard";
+export { Logger } from "./logger/logger";
+export { ConfigProvider } from "./config/config";
+export { StorageProvider } from "./storage/storage";
+export { ProfileProvider } from "./profile/profile";
+export { NodeWebkitProvider } from "./node-webkit/node-webkit";
+export { PlatformProvider } from "./platform/platform";
+export { QRScanner } from "@ionic-native/qr-scanner";
+export { ExternalLinkProvider } from "./external-link/external-link";
+export { PopupProvider } from "./popup/popup";
+export { ScanProvider } from "./scan/scan";
+export { ApiProvider } from "./api/api";
+export { ServiceProvider } from "./service/service";
+export { TypesProvider } from "./types/types";
+export { ResultProvider } from "./result/result";
+export { LanguageProvider } from "./language/language";
+export { JSApiProvider } from "./jsapi/jsapi";
+export { FactoryProvider } from "./factory/factory";
+export { WalletProvider } from "./wallet/wallet";

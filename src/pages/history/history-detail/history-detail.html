@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{ 'History Detail' | translate }}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <table>
+        <tr>
+            <td>action</td>
+            <td>{{historyDetail.action}}</td>
+        </tr>
+        <tr>
+            <td>amount</td>
+            <td>{{historyDetail.amount[historyDetail.asset]/1000000}}</td>
+        </tr>
+        <tr>
+            <td>asset</td>
+            <td>{{historyDetail.asset}}</td>
+        </tr>
+        <tr>
+            <td>assetId</td>
+            <td>{{historyDetail.assetId}}</td>
+        </tr>
+        <tr>
+            <td>fee</td>
+            <td>{{historyDetail.fee/1000000}}</td>
+        </tr>
+        <tr>
+            <td>message</td>
+            <td>{{historyDetail.message}}</td>
+        </tr>
+        <tr>
+            <td>time</td>
+            <td>{{historyDetail.timestamp | dateFormat}}</td>
+        </tr>
+        <tr>
+            <td>unit</td>
+            <td style="font-size: 12px;" (click)="toBrowser(historyDetail.unit)">{{historyDetail.unit}}</td>
+        </tr>
+        <tr>
+            <td>from</td>
+            <td>
+                <span *ngFor="let address of historyDetail.from">{{address}}
+                    <br>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td>to</td>
+            <td>
+                <span *ngFor="let item of historyDetail.to">{{item.address}} : {{item.amount/1000000}}
+                    <br>
+                </span>
+            </td>
+        </tr>
+    </table>
+
+</ion-content>

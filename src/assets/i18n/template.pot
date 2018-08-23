@@ -1,0 +1,176 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Back"
+msgstr ""
+
+#: Tab Title
+msgid "Wallet"
+msgstr ""
+
+msgid "Discover"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+#: Init App
+msgid "Welcome To TrustNote"
+msgstr ""
+
+msgid "Enter Wallet"
+msgstr ""
+
+msgid "Recover Wallet"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+#: Init App -> Create Wallet
+msgid "Create Wallet"
+msgstr ""
+
+msgid "Create wallet"
+msgstr ""
+
+msgid "Create"
+msgstr ""
+
+msgid "Backup Phrase"
+msgstr ""
+
+msgid "Recommend backup phrase to prevent account loss or backup in settings."
+msgstr ""
+
+msgid "Backup"
+msgstr ""
+
+msgid "Skip"
+msgstr ""
+
+msgid "Ok"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "TrustNote"
+msgstr ""
+
+#: Home Page
+msgid "Transfer"
+msgstr ""
+
+msgid "Assets"
+msgstr ""
+
+msgid "History"
+msgstr ""
+
+#: Home Page -> Wallet Address
+msgid "my wallet address"
+msgstr ""
+
+msgid "Copied to clipboard"
+msgstr ""
+
+#: Discover Page
+msgid "TrustNote Explorer"
+msgstr ""
+
+msgid "iToken Platform"
+msgstr ""
+
+#: Setting Page
+#: Setting Page -> Account
+msgid "Account"
+msgstr ""
+
+msgid "Wallet ID"
+msgstr ""
+
+msgid "Set Password"
+msgstr ""
+
+msgid "Update Password"
+msgstr ""
+
+msgid "Backup Wallet"
+msgstr ""
+
+msgid "Switch Account"
+msgstr ""
+
+msgid "The two password entries are inconsistent"
+msgstr ""
+
+msgid "Password set success"
+msgstr ""
+
+msgid "Please enter password"
+msgstr ""
+
+msgid "The input seed is invalid"
+msgstr ""
+
+msgid "Restore wallet"
+msgstr ""
+
+msgid "Restore"
+msgstr ""
+
+msgid "Please enter password again"
+msgstr ""
+
+msgid "Close passwoed"
+msgstr ""
+
+msgid "wrong password"
+msgstr ""
+
+#: Setting Page -> General
+msgid "General"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Currency"
+msgstr ""
+
+msgid "CNY"
+msgstr ""
+
+msgid "USD"
+msgstr ""
+
+#: Setting Page -> Follow Us
+msgid "Follow Us"
+msgstr ""
+
+#: Setting Page -> Support
+msgid "Support"
+msgstr ""
+
+#: Setting Page -> About
+msgid "About"
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+#: Setting Page -> Terms of Use
+msgid "Terms of Use"
+msgstr ""
+
+#: Setting Page -> Privacy Policy
+msgid "Privacy Policy"
+msgstr ""
+
+#: Home page -> More
+msgid "More"
+msgstr ""
