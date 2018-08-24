@@ -78,6 +78,19 @@ msgstr ""
 msgid "Copied to clipboard"
 msgstr ""
 
+#: Home Page -> Pay
+msgid "Pay"
+msgstr ""
+
+msgid "Pay to Address"
+msgstr ""
+
+msgid "Payment Amount"
+msgstr ""
+
+msgid "Additional Message(optional)"
+msgstr ""
+
 #: Discover Page
 msgid "TrustNote Explorer"
 msgstr ""

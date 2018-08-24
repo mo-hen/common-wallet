@@ -80,6 +80,19 @@ msgstr "我的钱包地址"
 msgid "Copied to clipboard"
 msgstr "已复制到剪贴板"
 
+#: Home Page -> Pay
+msgid "Pay"
+msgstr "支付"
+
+msgid "Pay to Address"
+msgstr "付款到此地址"
+
+msgid "Payment Amount"
+msgstr "付款金额"
+
+msgid "Additional Message(optional)"
+msgstr "附加信息（可选）"
+
 #: Discover Page
 msgid "TrustNote Explorer"
 msgstr "TrustNote浏览器"

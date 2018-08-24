@@ -80,6 +80,19 @@ msgstr "my wallet address"
 msgid "Copied to clipboard"
 msgstr "Copied to clipboard"
 
+#: Home Page -> Pay
+msgid "Pay"
+msgstr "Pay"
+
+msgid "Pay to Address"
+msgstr "Pay to Address"
+
+msgid "Payment Amount"
+msgstr "Payment Amount"
+
+msgid "Additional Message(optional)"
+msgstr "Additional Message(optional)"
+
 #: Discover Page
 msgid "TrustNote Explorer"
 msgstr "TrustNote Explorer"

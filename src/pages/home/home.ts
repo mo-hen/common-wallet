@@ -27,7 +27,7 @@ export class HomePage {
         public popoverCtrl: PopoverController,
         private service: ServiceProvider
     ) {
-        this.logger.info(" profile--------" + JSON.stringify(this.profile.profileTotal));
+        this.logger.info(" profile--------", this.profile.profileTotal);
         this.loginDate = {
             pubkey: this.profile.profileTotal.wallet.addressPubkey
         };
@@ -74,23 +74,29 @@ export class HomePage {
         this.logger.info("getBalance start...");
         this.service
             .getBalance(this.profile.profileTotal.wallet.address, "base")
-            .subscribe(response => {
-                this.logger.info(response);
-                if (this.amount != (response.data.amount + response.data.pending) / 1000000) {
-                    this.profile.profileTotal.asset.TTT.balance =
-                        response.data.amount + response.data.pending;
-                    this.profile.storeAsset(this.profile.profileTotal.asset).then(ret => {
-                        this.logger.info(ret);
-                    });
-                    this.amount = (response.data.amount + response.data.pending) / 1000000;
+            .subscribe(
+                response => {
+                    this.logger.info(response);
+                    if (this.amount != (response.data.amount + response.data.pending) / 1000000) {
+                        this.profile.profileTotal.asset.TTT.balance =
+                            response.data.amount + response.data.pending;
+                        this.profile.storeAsset(this.profile.profileTotal.asset).then(ret => {
+                            this.logger.info(ret);
+                        });
+                        this.amount = (response.data.amount + response.data.pending) / 1000000;
+                    }
+                    refresher.complete();
+                },
+                rejects => {
+                    this.logger.info('错误：',rejects);
+                    refresher.cancel();
                 }
-                refresher.complete();
-            });
+            );
 
         // 超时 5S 取消刷新
-        setTimeout(() => {
-            this.logger.info("NetWork Err");
-            refresher.cancel();
-        }, 5000);
+        // setTimeout(() => {
+        //     this.logger.info("NetWork Err");
+        //     refresher.cancel();
+        // }, 5000);
     }
 }

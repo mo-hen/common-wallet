@@ -1,3 +1,41 @@
 page-send {
-
+    ion-grid{
+        ion-row{
+            //background: red;
+            margin-top: 15px;
+            border-bottom: 0.5px solid #c8c7cc;
+            ion-col{
+                position: relative;
+                p{
+                    font-size: 14px;
+                    color: #333; //007BD9
+                    margin: 0;
+                }
+                input{
+                    //border: 1px solid red;
+                    border: none;
+                    width: 100%;
+                    font-size: 12px;
+                    margin: 10px 0 5px;
+                }
+                input.isValid{
+                    color: #666;
+                }
+                div.clickToDel{
+                    position: absolute;
+                    font-size: 24px;
+                    right: 10px;
+                    bottom: 0px;
+                    //background: red;
+                    padding: 5px;
+                }
+                ion-select{
+                    //background: red;
+                    position: absolute;
+                    right: 10px;
+                    bottom: 0;
+                }
+            }
+        }
+    }
 }

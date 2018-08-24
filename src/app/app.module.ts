@@ -46,7 +46,10 @@ export function createTranslateLoader(http: HttpClient) {
             }
         }),
         IonicModule.forRoot(MyApp, {
-            backButtonText: ""
+            backButtonText: "",
+            tabsHideOnSubPages: 'true',
+            activator: 'highlight',
+            swipeBackEnabled: true
         }),
         IonicStorageModule.forRoot({
             name: "__tttdb",

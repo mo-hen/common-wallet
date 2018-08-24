@@ -5,22 +5,46 @@
 </ion-header>
 
 <ion-content>
-    <ion-list>
-        <ion-item>
-            <ion-label stacked>{{ 'Payee Address' | translate}}</ion-label>
-            <ion-input [(ngModel)]="payeeAddress"></ion-input>
-        </ion-item>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <p>{{ 'Pay to Address' | translate}}</p>
+                <input
+                    [ngClass]="{'isValid':isReadonly}"
+                    placeholder="请输入对方地址"
+                    [(ngModel)]="payeeAddress"
+                    (keyup)="onKey($event)"
+                    [readonly]="isReadonly" />
+                <div class="clickToDel" *ngIf='isReadonly' (click)="clearAddress()">
+                    <ion-icon name="close-circle"></ion-icon>
+                </div>
+            </ion-col>
+        </ion-row>
 
-        <ion-item>
-            <ion-label stacked>{{ 'Payment Amount' | translate}}</ion-label>
-            <ion-input [(ngModel)]="paymentAmount"></ion-input>
-        </ion-item>
+        <ion-row>
+            <ion-col>
+                <p>{{ 'Payment Amount' | translate}}</p>
+                <input
+                    placeholder="请输入金额"
+                    [(ngModel)]="paymentAmount" />
+                <ion-select [(ngModel)]="assetType" (ngModelChange)="getCurrentValue()" okText="确定" cancelText="取消">
+                    <ion-option selected>请选择资产类型</ion-option>
+                    <ion-option value="MN">MN</ion-option>
+                    <ion-option value="CC">CC</ion-option>
+                    <ion-option value="VB">VB</ion-option>
+                </ion-select>
+            </ion-col>
+        </ion-row>
 
-        <ion-item>
-            <ion-label stacked>{{ 'Additional Message(optional)' | translate}}</ion-label>
-            <ion-input [(ngModel)]="additionalMessage"></ion-input>
-        </ion-item>
-    </ion-list>
+        <ion-row>
+            <ion-col>
+                <p>{{ 'Additional Message(optional)' | translate}}</p>
+                <input
+                    placeholder="请输入附加信息"
+                    [(ngModel)]="additionalMessage" />
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 
     <div padding>
         <button ion-button block (click)="send()">{{ 'Pay' | translate}}</button>

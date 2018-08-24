@@ -6,6 +6,7 @@ import { Logger } from "../../providers/logger/logger";
 import { ProfileProvider, ServiceProvider } from "../../providers";
 import * as Core from "wallet-base";
 import { TranslateService } from "@ngx-translate/core";
+import { WalletProvider } from "../../providers/wallet/wallet";
 
 @Component({
     selector: "page-send",
@@ -31,6 +32,9 @@ export class SendPage {
     path: string;
     sigData: any;
 
+    isReadonly: boolean;
+    assetType: string;
+
     constructor(
         public navCtrl: NavController,
         private logger: Logger,
@@ -39,6 +43,7 @@ export class SendPage {
         private translate: TranslateService,
         private service: ServiceProvider,
         public alertCtrl: AlertController,
+        public wallet: WalletProvider,
         private factory: FactoryProvider
     ) {
         this.myAddress = this.profile.profileTotal.wallet.address;
@@ -46,6 +51,28 @@ export class SendPage {
 
     ionViewDidLoad() {
         this.logger.info("ionViewDidLoad SendPage");
+        this.isReadonly = false;
+        this.assetType = 'MN';
+    }
+
+
+    onKey(ev){
+        if( this.wallet.isValidAddress(ev.target.value) ){
+            this.fnIsReadonly(true);
+        }
+    }
+    fnIsReadonly(isReadonly: boolean){
+        this.isReadonly = isReadonly;
+    }
+
+    // 清空地址
+    clearAddress(){
+        this.fnIsReadonly(false);
+        this.payeeAddress = '';
+    }
+
+    getCurrentValue(){
+        console.log('^^^^^^^^^^^^^^^^^' + this.assetType)
     }
 
     // 发送 资产

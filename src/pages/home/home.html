@@ -11,10 +11,12 @@
 
 
 <ion-content>
-    <ion-refresher snapbackDuration=200 pullMax=300 (ionRefresh)="refresh($event)">
+    <!--下拉刷新-->
+    <ion-refresher snapbackDuration=200 (ionRefresh)="refresh($event)">
         <ion-refresher-content pullingIcon="arrow-down" refreshingSpinner="circles"></ion-refresher-content>
     </ion-refresher>
 
+    <!--banner 背景-->
     <div class="banner">
         <h1 class="amount-title">
             {{amount}}
@@ -22,25 +24,27 @@
         </h1>
     </div>
 
-    <div class="flex-box">
-        <div (click)="navToSend()" class="flex-item">
-            <button ion-button icon-only color="dark" block>
+    <!--sub 功能-->
+    <ion-grid>
+        <ion-row>
+
+            <ion-col (click)="navToSend()">
                 <ion-icon name="share"></ion-icon>
-            </button>
-            <p>{{ 'Transfer' | translate}}</p>
-        </div>
-        <div (click)="navToAssets()" class="flex-item">
-            <button ion-button icon-only color="dark" block>
+                <p>{{ 'Transfer' | translate}}</p>
+            </ion-col>
+
+            <ion-col (click)="navToAssets()">
                 <ion-icon name="card"></ion-icon>
-            </button>
-            <p>{{ 'Assets' | translate}}</p>
-        </div>
-        <div (click)="navToHistory()" class="flex-item">
-            <button ion-button icon-only color="dark" block>
+                <p>{{ 'Assets' | translate}}</p>
+            </ion-col>
+
+            <ion-col (click)="navToHistory()">
                 <ion-icon name="list"></ion-icon>
-            </button>
-            <p>{{ 'History' | translate}}</p>
-        </div>
-    </div>
+                <p>{{ 'History' | translate}}</p>
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
 
 </ion-content>
